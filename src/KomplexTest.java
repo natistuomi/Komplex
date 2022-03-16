@@ -1,9 +1,3 @@
-/**
- * This is a class
- * Created 2020-02-06
- *
- * @author Magnus Silverdal
- */
 public class KomplexTest {
 
     public static void main(String[] args) {
@@ -11,7 +5,7 @@ public class KomplexTest {
         Komplex b = new Komplex(4.0,1.0);
 
         System.out.println("talet borde vara 3 + 2i:\n" + a);
-
+/**
         Komplex c = a.add(b);
         Komplex d = new Komplex(7,3);
 
@@ -32,5 +26,7 @@ public class KomplexTest {
         if (a.arg() == Math.atan(2.0/3)) {
             System.out.println("arg() funkar!!");
         }
+
+ **/
     }
 }
