@@ -42,7 +42,7 @@ public class Komplex {
         return a;
     }
 
-    public double arg(){
+    public double argRad(){
         return Math.atan(im / re);
     }
 

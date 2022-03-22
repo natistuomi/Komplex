@@ -24,8 +24,8 @@ public class KomplexTest {
             System.out.println("multiply funkar!!");
         }
 
-        System.out.println("Argumentet till 3+2i är " + a.arg()+ " radianer");
-        if (a.arg() == Math.atan(2.0/3.0)) {
+        System.out.println("Argumentet till 3+2i är " + a.argRad()+ " radianer");
+        if (a.argRad() == Math.atan(2.0/3.0)) {
             System.out.println("arg() funkar!!");
         }
 
