@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Komplex {
 
     double re = 1;
@@ -8,15 +10,55 @@ public class Komplex {
         im = b;
     }
 
-    public Komplex add(Komplex x){
-        double re3 = re + x.re;
-        double im3 = im + x.im;
-        Komplex a = new Komplex(re3, im3);
-        return a;
-    }
-
     @Override
     public String toString() {
         return "Komplex{ " + re + " + " + im + "i }";
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Komplex komplex = (Komplex) o;
+        return Double.compare(komplex.re, re) == 0 && Double.compare(komplex.im, im) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(re, im);
+    }
+
+    public Komplex add(Komplex x){
+        double reNew = re + x.re;
+        double imNew = im + x.im;
+        Komplex a = new Komplex(reNew, imNew);
+        return a;
+    }
+
+    public Komplex multiply(Komplex x){
+        double reNew = re * x.re - im * x.im;
+        double imNew = im * x.re + x.im * re;
+        Komplex a = new Komplex(reNew, imNew);
+        return a;
+    }
+
+    public double arg(){
+        double x = Math.atan(im / re);
+        return x;
+    }
+
+    public Komplex subtract(Komplex x){
+        double reNew = re - x.re;
+        double imNew = im - x.im;
+        Komplex a = new Komplex(reNew, imNew);
+        return a;
+    }
+
+    public Komplex divide(Komplex x){
+        double reNew = (re*x.re + im*x.im) / (x.re*x.re + x.im*x.im);
+        double imNew = (im*x.re - re*x.im) / (x.re*x.re + x.im*x.im);
+        Komplex a = new Komplex(reNew, imNew);
+        return a;
+    }
+
 }
