@@ -43,8 +43,11 @@ public class Komplex {
     }
 
     public double arg(){
-        double x = Math.atan(im / re);
-        return x;
+        return Math.atan(im / re);
+    }
+
+    public double argDeg(){
+        return Math.atan(im/re) * (180/Math.PI);
     }
 
     public Komplex subtract(Komplex x){

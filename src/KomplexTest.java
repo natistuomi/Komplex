@@ -24,10 +24,13 @@ public class KomplexTest {
             System.out.println("multiply funkar!!");
         }
 
-        System.out.println("Argumentet till 3+2i är " + a.arg()+ "radianer");
+        System.out.println("Argumentet till 3+2i är " + a.arg()+ " radianer");
         if (a.arg() == Math.atan(2.0/3.0)) {
             System.out.println("arg() funkar!!");
         }
+
+        System.out.println("Argumentet till 3+2i är ungefär 33.69 grader");
+        System.out.println("Argumentet är exakt " + a.argDeg() + " grader");
 
         c = a.subtract(b);
         d = new Komplex(-1,1);
