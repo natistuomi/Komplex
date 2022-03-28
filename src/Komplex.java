@@ -31,15 +31,13 @@ public class Komplex {
     public Komplex add(Komplex x){
         double reNew = re + x.re;
         double imNew = im + x.im;
-        Komplex a = new Komplex(reNew, imNew);
-        return a;
+        return new Komplex(reNew, imNew);
     }
 
     public Komplex multiply(Komplex x){
         double reNew = re * x.re - im * x.im;
         double imNew = im * x.re + x.im * re;
-        Komplex a = new Komplex(reNew, imNew);
-        return a;
+        return new Komplex(reNew, imNew);
     }
 
     public double argRad(){
@@ -53,15 +51,13 @@ public class Komplex {
     public Komplex subtract(Komplex x){
         double reNew = re - x.re;
         double imNew = im - x.im;
-        Komplex a = new Komplex(reNew, imNew);
-        return a;
+        return new Komplex(reNew, imNew);
     }
 
     public Komplex divide(Komplex x){
         double reNew = (re*x.re + im*x.im) / (x.re*x.re + x.im*x.im);
         double imNew = (im*x.re - re*x.im) / (x.re*x.re + x.im*x.im);
-        Komplex a = new Komplex(reNew, imNew);
-        return a;
+        return new Komplex(reNew, imNew);
     }
 
 }
