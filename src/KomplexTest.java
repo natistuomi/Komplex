@@ -44,5 +44,9 @@ public class KomplexTest {
         System.out.println("C: " + c);
         System.out.println("D: " + d);
 
+        c = new Komplex(1, 1);
+        System.out.println(a.add(b).add(c).subtract(c));
+        //metoder kan radas upp efter varandra...
+
     }
 }
