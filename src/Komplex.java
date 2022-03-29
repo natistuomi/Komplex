@@ -12,7 +12,7 @@ public class Komplex {
 
     @Override
     public String toString() {
-        return "Komplex{ " + re + " + " + im + "i }";
+        return re + " + " + im + "i";
     }
 
     @Override
