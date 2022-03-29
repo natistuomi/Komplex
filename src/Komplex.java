@@ -2,8 +2,8 @@ import java.util.Objects;
 
 public class Komplex {
 
-    double re = 1;
-    double im = 1;
+    double re;
+    double im;
 
     public Komplex(double a, double b){
         re = a;
